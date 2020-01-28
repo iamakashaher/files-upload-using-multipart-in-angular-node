@@ -1,0 +1,30 @@
+<div class="mainContainer">
+  <div class="content">
+    <div class="header">
+      <h1>Angular File Upload</h1>
+    </div>
+    <div class="row margin25">
+      <div class="col-md-4">
+      </div>
+      <div class="col-md-4">
+        <div class="input-group">
+          <div class="custom-file">
+            <form action="/api/upload" method="post" enctype="multipart/form-data">
+              <input type="file" class="custom-file-input" id="inputGroupFile"
+                aria-describedby="inputGroupFile" (change)="fileChange($event)" multiple>
+            </form>
+            <label class="custom-file-label" for="inputGroupFile">{{filenames}}</label>
+          </div>
+        </div>
+        <div style="text-align: center;">
+          <p>Selected File: {{filenames}}</p>
+        </div>
+        <div class="input-group-prepend mt-3 center">
+          <span class="input-group-text upload" id="btnUpload" (click)="upload()">Upload {{filenames.length}} Files</span>
+        </div>
+      </div>
+      <div class="col-md-4">
+      </div>
+    </div>
+  </div>
+</div>
